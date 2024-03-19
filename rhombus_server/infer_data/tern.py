@@ -5,7 +5,7 @@ from pandas.tseries.api import guess_datetime_format
 BOOLEAN_FORMATS = {"true", "false", "yes", "no", "1", "0"}
 
 def infer_ints(column):
-    return sum(1 for cell in column if cell.isdigit())
+    return sum(1 for cell in column if str(cell).isdigit())
 
 def infer_floats(column):
     return sum(1 for cell in column if isinstance(cell, float) or (isinstance(cell, str) and cell.replace('.', '', 1).isdigit()))
@@ -40,16 +40,24 @@ def iter_columns(df):
             'Integer' if infer_ints(df[column]) > 0 else
             'Float' if infer_floats(df[column]) > 0 else
             'Complex' if infer_complex(df[column]) > 0 else
-            'Category' if infer_categorical(df[column]) else
             'Date' if infer_datetime(df[column]).notna().all() else
-            u'Δ Time' if infer_timedelta(df[column]).notna().all() else
+            'Δ Time' if infer_timedelta(df[column]).notna().all() else
+            'Category' if infer_categorical(df[column]) else
             'Text'  # default to object if none of the above
         )
         type_map[column] = inferred_type
 
     return df, type_map
 
-def process(csv):
-    df = pd.read_csv(csv)
+def process(file, file_type):
+    try:
+        if file_type == "csv":
+            df = pd.read_csv(file)
+        elif file_type == "excel":
+            df = pd.read_excel(file, engine='xlrd')  
+        else:
+            return  (f"Error reading file", "abc")
 
-    return iter_columns(df)
+        return iter_columns(df)
+    except Exception as e:
+        return (f"Error reading file: {e}", "abc")

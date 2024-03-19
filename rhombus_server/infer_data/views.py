@@ -15,12 +15,13 @@ def infer_data(request):
     if request.method == 'POST':
         # data = request.data
         file_obj = request.FILES['file']
-        df, type_map = tern.process(file_obj)  
-    
-        # Infer data types for each column
-        # data_types = {}
-        # for column in df.columns:
-        #     data_types[column] = str(df[column].dtype)
+        file_type = request.POST.get('file_type', '').lower()
+        if file_type not in ['csv', 'excel']:
+                return Response({'error': 'Invalid file type'}, status=400)
+             
+        df, type_map = tern.process(file_obj, file_type)
+        if type(df) is str:
+             return Response(df)
         
         # Convert DataFrame to JSON
         df_json = df.to_json(orient='records')

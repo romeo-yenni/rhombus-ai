@@ -1,0 +1,39 @@
+Name,Birthdate,Score,Grade,Complex,Timedelta,Bool
+Alice,1/01/1990,90,A,3 + 2j,12514 days,true
+Bob,2/02/1991,75,B,1 - 4j,3 W,false
+Charlie,3/03/1992,85,A,0 + 1j,24s,Yes
+David,4/04/1993,70,B,-2.5 + 0.5j,8 ms,No
+Eve,5/05/1994,Not Available,A,4.2 - 3.7j,365 days,True
+Nik,12/09/2002,51,C,1 + 2j,52 ns,no
+Fiona,6/06/1995,78,B,2.5 - 1.5j,300 days,true
+George,7/07/1996,82,A,3.7 + 4j,2 M,false
+Hannah,8/08/1997,95,A,1 - 2j,6 h,No
+Isaac,9/09/1998,68,C,4 + 3j,1 Y,Yes
+Jack,10/10/1999,71,B,2.5 + 1j,100 ms,No
+Kate,11/11/2000,Not Available,A,-3 + 2j,500 days,True
+Liam,12/12/2001,80,B,0 + 5j,10 ns,no
+Mia,1/01/2003,88,A,1 + 3.5j,2 d,true
+Olivia,2/02/2004,73,B,3 - 1j,4 W,false
+Patrick,3/03/2005,77,A,2 + 2j,1 Y,Yes
+Quinn,4/04/2006,Not Available,C,-2.5 - 1j,600 days,No
+Rachel,5/05/2007,69,C,1.5 - 2j,3 M,True
+Steven,6/06/2008,Not Available,B,0.5 + 4j,700 days,No
+Tina,7/07/2009,84,A,4 - 3j,1 M,true
+Uma,8/08/2010,92,A,-1 + 0.5j,10 ms,false
+Victor,9/09/2011,65,C,2.3 - 0.8j,15 us,Yes
+Wendy,10/10/2012,Not Available,B,3.5 + 2j,800 days,No
+Xavier,11/11/2013,79,B,-4 + 3j,2 M,true
+Yara,12/12/2014,83,A,0.7 - 2j,1 Y,false
+Zara,1/01/2016,75,B,2.1 + 1.3j,3 h,true
+Aaron,2/02/2017,Not Available,A,-2.8 - 1.2j,900 days,No
+Bella,3/03/2018,86,A,1.2 + 3.8j,5 W,true
+Caleb,4/04/2019,70,C,3 - 2j,7 ms,No
+Diana,5/05/2020,Not Available,B,0.6 + 2j,1000 days,Yes
+Ethan,6/06/2021,89,A,-0.5 - 4j,8 ns,true
+Faith,7/07/2022,72,B,2.8 + 1j,1 d,false
+Grace,8/08/2023,Not Available,C,1.5 - 3j,1100 days,Yes
+Henry,9/09/2024,93,A,-2 + 1j,20s,true
+Ian,10/10/2025,68,B,3.2 - 1j,2 M,No
+Jasmine,11/11/2026,80,A,-1.3 + 2j,9 h,Yes
+Kylie,12/12/2027,Not Available,A,2.9 - 0.5j,1200 days,No
+Landon,1/01/2028,77,B,1.5 + 3j,6 ns,true

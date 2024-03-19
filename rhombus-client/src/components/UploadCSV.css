@@ -22,3 +22,7 @@
   .upload-form button:hover {
     background-color: #45a049;
   }
+
+  .upload-form select {
+    margin-right: 20px;
+  }

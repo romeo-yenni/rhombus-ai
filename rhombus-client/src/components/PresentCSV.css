@@ -1,29 +1,44 @@
 .dataframe-container {
-    width: 100%; /* Adjust as needed */
-    overflow: auto;
-    padding: 10px;
-  }
-  
-  .table-wrapper {
-    max-height: calc(100vh - 150px); /* Adjust as needed */
-    overflow: auto;
-  }
-  
-  .dataframe {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .dataframe th,
+  width: 100%;
+  overflow: auto;
+  padding: 10px;
+}
+
+.table-wrapper {
+  max-height: calc(100vh - 200px);
+  overflow: auto;
+}
+
+.dataframe {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dataframe th,
 .dataframe td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
-  white-space: nowrap; /* Prevent line breaks */
-  overflow: hidden; /* Hide overflowing content */
-  text-overflow: ellipsis; /* Show ellipsis for overflowing content */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .dataframe th {
   background-color: #f2f2f2;
+}
+
+.dataframe-container select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.dataframe-container select:focus {
+  outline: none;
+}
+
+.dataframe-container select option {
+  font-size: 14px;
 }

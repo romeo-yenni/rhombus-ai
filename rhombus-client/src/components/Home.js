@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Navbar from './Navbar';
 import UploadCSV from './UploadCSV';
 import PresentCSV from './PresentCSV';
 import './Home.css'
@@ -13,7 +12,6 @@ const Home = () => {
 
   return (
     <>
-      <Navbar></Navbar>
 
       <div className='main-content' >
         <div className="centered-container">
