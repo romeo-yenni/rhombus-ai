@@ -1,8 +1,7 @@
-import './Home.css';
 import React, { useState } from 'react';
 import Navbar from './Navbar';
 import UploadCSV from './UploadCSV';
-import PresentCSV from './PresentCSV'
+import PresentCSV from './PresentCSV';
 
 const Home = () => {
   const [responseData, setResponseData] = useState(null);
@@ -19,7 +18,6 @@ const Home = () => {
           <UploadCSV onResponse={handleResponse} />
           <PresentCSV responseData={responseData} />
       </div>
-    
     </>
   );
 };

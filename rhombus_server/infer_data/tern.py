@@ -32,6 +32,8 @@ def infer_timedelta(column):
     return pd.to_timedelta(column, errors='coerce')
 
 def iter_columns(df):
+    type_map = {}
+
     for column in df.columns:
         inferred_type = (
             'bool' if infer_bool(df[column]) else
@@ -43,8 +45,9 @@ def iter_columns(df):
             'timedelta64[ns]' if infer_timedelta(df[column]).notna().all() else
             'object'  # default to object if none of the above
         )
-        df[column] = df[column].astype(inferred_type, errors='ignore')
-    return df
+        type_map[column] = inferred_type
+
+    return df, type_map
 
 def process(csv):
     df = pd.read_csv(csv)

@@ -2,36 +2,29 @@ import React from 'react';
 
 const PresentCSV = ({ responseData }) => {
   return (
-    <div>
-      <h2>Inferred Datatypes</h2>
-      <div className="response-data">
-        {responseData && (
-          <>
-            <h3>Data Types:</h3>
-            <ul>
-              {Object.keys(responseData.data_types).map((key) => (
-                <li key={key}>
-                  <strong>{key}:</strong> {responseData.data_types[key]}
-                </li>
+    <div className="dataframe-container">
+      {responseData && (
+        <table className="dataframe">
+          <thead>
+            <tr>
+              {Object.keys(responseData.data_types).map((column, index) => (
+                <th key={index}>
+                  {column} ({responseData.data_types[column]})
+                </th>
               ))}
-            </ul>
-            <h3>Data:</h3>
-            <ul>
-              {responseData.data.map((row, rowIndex) => (
-                <li key={rowIndex}>
-                  <ul>
-                    {Object.keys(row).map((column, columnIndex) => (
-                      <li key={columnIndex}>
-                        <strong>{column}:</strong> {row[column]}
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              ))}
-            </ul>
-          </>
-        )}
-      </div>
+            </tr>
+          </thead>
+          <tbody>
+            {responseData.data.map((row, rowIndex) => (
+              <tr key={rowIndex}>
+                {Object.values(row).map((value, colIndex) => (
+                  <td key={colIndex}>{value}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
     </div>
   );
 };
