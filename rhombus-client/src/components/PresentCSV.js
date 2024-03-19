@@ -11,7 +11,6 @@ const PresentCSV = ({ responseData }) => {
     });
   };
 
-  // Render string data directly
   if (typeof responseData === 'string') {
     return (
       <div className="string-data">

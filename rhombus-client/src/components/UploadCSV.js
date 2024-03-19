@@ -17,7 +17,7 @@ const UploadCSV = ({ onResponse }) => {
     e.preventDefault();
     const formData = new FormData();
     formData.append('file', file);
-    formData.append('file_type', fileType); // Include file type in the formData
+    formData.append('file_type', fileType);
 
     try {
       const response = await fetch('http://127.0.0.1:8000/api/infer', {
