@@ -15,12 +15,15 @@
   }
   
   .dataframe th,
-  .dataframe td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  .dataframe th {
-    background-color: #f2f2f2;
-  }
+.dataframe td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: hidden; /* Hide overflowing content */
+  text-overflow: ellipsis; /* Show ellipsis for overflowing content */
+}
+
+.dataframe th {
+  background-color: #f2f2f2;
+}

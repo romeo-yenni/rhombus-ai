@@ -36,14 +36,14 @@ def iter_columns(df):
 
     for column in df.columns:
         inferred_type = (
-            'bool' if infer_bool(df[column]) else
-            'int64' if infer_ints(df[column]) > 0 else
-            'float64' if infer_floats(df[column]) > 0 else
-            'complex' if infer_complex(df[column]) > 0 else
-            'category' if infer_categorical(df[column]) else
-            'datetime64[ns]' if infer_datetime(df[column]).notna().all() else
-            'timedelta64[ns]' if infer_timedelta(df[column]).notna().all() else
-            'object'  # default to object if none of the above
+            'Boolean' if infer_bool(df[column]) else
+            'Integer' if infer_ints(df[column]) > 0 else
+            'Float' if infer_floats(df[column]) > 0 else
+            'Complex' if infer_complex(df[column]) > 0 else
+            'Category' if infer_categorical(df[column]) else
+            'Date' if infer_datetime(df[column]).notna().all() else
+            u'Δ Time' if infer_timedelta(df[column]).notna().all() else
+            'Text'  # default to object if none of the above
         )
         type_map[column] = inferred_type
 
