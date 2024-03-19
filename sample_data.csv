@@ -1,0 +1,7 @@
+Name,Birthdate,Score,Grade,Complex,Timedelta,Bool
+Alice,1/01/1990,90,A,3 + 2j,12514 days,true
+Bob,2/02/1991,75,B,1 - 4j,3 W,false
+Charlie,3/03/1992,85,A,0 + 1j,24s,Yes
+David,4/04/1993,70,B,-2.5 + 0.5j,8 ms,No
+Eve,5/05/1994,Not Available,A,4.2 - 3.7j,365 days,True
+Nik,12/09/2002,51,C,1 + 2j,52 ns,no

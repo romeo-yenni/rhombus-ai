@@ -1,0 +1,35 @@
+.data-presentation {
+    height: 500px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .data-presentation h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .data-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .data-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .data-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .data-item p {
+    font-size: 1rem;
+    color: #333;
+  }
+  

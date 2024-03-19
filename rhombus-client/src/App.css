@@ -1,0 +1,5 @@
+.main-content {
+  height: 80vh;
+  display: flex;
+  align-content: center;
+}

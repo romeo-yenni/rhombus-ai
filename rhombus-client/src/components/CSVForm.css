@@ -1,0 +1,33 @@
+.csv-input-form {
+  height: 500px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.csv-input-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.csv-input-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.csv-input-form input[type='file'] {
+  margin-bottom: 20px;
+}
+
+.csv-input-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.csv-input-form button:hover {
+  background-color: #0056b3;
+}
