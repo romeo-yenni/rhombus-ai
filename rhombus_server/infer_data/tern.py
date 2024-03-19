@@ -35,17 +35,18 @@ def iter_columns(df):
     for column in df.columns:
         inferred_type = (
             'bool' if infer_bool(df[column]) else
-            'int' if infer_ints(df[column]) > 0 else
-            'float' if infer_floats(df[column]) > 0 else
+            'int64' if infer_ints(df[column]) > 0 else
+            'float64' if infer_floats(df[column]) > 0 else
             'complex' if infer_complex(df[column]) > 0 else
-            'datetime' if infer_datetime(df[column]).notna().all() else
-            'timedelta' if infer_timedelta(df[column]).notna().all() else
+            'category' if infer_categorical(df[column]) else
+            'datetime64[ns]' if infer_datetime(df[column]).notna().all() else
+            'timedelta64[ns]' if infer_timedelta(df[column]).notna().all() else
             'object'  # default to object if none of the above
         )
-        print(f"{column}: {inferred_type}")
-
+        df[column] = df[column].astype(inferred_type, errors='ignore')
+    return df
 
 def process(csv):
-    df = pd.read_csv('sample_data.csv')
-    iter_columns(df)
-    return "good!"
+    df = pd.read_csv(csv)
+
+    return iter_columns(df)

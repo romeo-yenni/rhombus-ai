@@ -1,22 +1,28 @@
 import './App.css';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
-import CSVForm from './components/CSVForm';
-import PresentColumns from './components/PresentColumns';
+import HelloWorld from './components/HelloWorld';
+import UploadCSV from './components/UploadCSV';
+import PresentCSV from './components/PresentCSV'
 
-function App() {
+const App = () => {
+  const [responseData, setResponseData] = useState(null);
+
+  const handleResponse = (data) => {
+    setResponseData(data);
+  };
+
   return (
     <>
-    <Navbar></Navbar>
-    <div class='main-content'>
+      <Navbar></Navbar>
 
-      <CSVForm></CSVForm>
-
-      <PresentColumns></PresentColumns>
-
-    </div>
-
+      <div className='main-content' >
+          <UploadCSV onResponse={handleResponse} />
+          <PresentCSV responseData={responseData} />
+      </div>
+    
     </>
   );
-}
+};
 
 export default App;
