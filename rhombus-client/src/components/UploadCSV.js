@@ -37,7 +37,7 @@ const UploadCSV = ({ onResponse }) => {
       <form onSubmit={handleSubmit}>
         <input type="file" accept=".csv, .xlsx, .xls" onChange={handleFileChange} />
         <select value={fileType} onChange={handleFileTypeChange}>
-          {/* <option value="">Select file type</option> */}
+          <option value="">Select file type</option>
           <option value="csv">CSV</option>
           <option value="excel">Excel</option>
         </select>
