@@ -4,12 +4,16 @@
   }
   
   .navbar-nav {
+    display: flex;
+    justify-items: flex-start;
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
   
   .nav-item {
+    padding-left: 15px;
+    padding-right: 15px;
     display: inline-block;
     margin-right: 15px;
   }

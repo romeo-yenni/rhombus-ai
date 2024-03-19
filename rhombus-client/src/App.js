@@ -1,28 +1,18 @@
 import './App.css';
-import React, { useState } from 'react';
-import Navbar from './components/Navbar';
-import HelloWorld from './components/HelloWorld';
-import UploadCSV from './components/UploadCSV';
-import PresentCSV from './components/PresentCSV'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Routes component
+import React from 'react';
+import Home from './components/Home';
+import AuthorPage from './components/Author';
 
-const App = () => {
-  const [responseData, setResponseData] = useState(null);
-
-  const handleResponse = (data) => {
-    setResponseData(data);
-  };
-
+function App() {
   return (
-    <>
-      <Navbar></Navbar>
-
-      <div className='main-content' >
-          <UploadCSV onResponse={handleResponse} />
-          <PresentCSV responseData={responseData} />
-      </div>
-    
-    </>
+    <Router>
+      <Routes> 
+        <Route path="/" element={<Home/>} /> 
+        <Route path="/author" element={<AuthorPage/>} /> 
+      </Routes>
+    </Router>
   );
-};
+}
 
 export default App;
