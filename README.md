@@ -1,40 +1,40 @@
-#Data Inference App
+# Data Inference App
 
 
 A django/react app which reads csv/excel files and return the inferred datatypes of columns
 
-##Installation
+## Installation
 
-git clone <repository_url>
+ > git clone <repository_url>
 
-Navigate to the project directory:
+**Navigate to the project directory:**
 
-cd project_directory
+ > cd project_directory
 
-Install backend dependencies:
+**Install backend dependencies:**
 
-pip install -r requirements.txt
+ > pip install -r requirements.txt
 
-Install frontend dependencies:
+**Install frontend dependencies:**
 
-cd frontend
-npm install
+ > cd frontend
+ > npm install
 
-##Usage
+## Usage
 
-Start the backend server:
+**Start the backend server:**
 
-python manage.py runserver
+ > python manage.py runserver
 
-Start the frontend development server:
+**Start the frontend development server:**
 
-cd frontend
-npm start
+ > cd frontend
+ > npm start
 
-Access the application in your web browser at http://localhost:3000.
+**Access the application in your web browser at http://localhost:3000.**
 
 
-##Technologies Used
+## Technologies Used
 
 Django
 React
