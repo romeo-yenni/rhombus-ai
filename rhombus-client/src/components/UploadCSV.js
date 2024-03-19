@@ -1,4 +1,6 @@
+
 import React, { useState } from 'react';
+import './UploadCSV.css';
 
 const UploadCSV = ({ onResponse }) => {
   const [file, setFile] = useState(null);
@@ -25,7 +27,7 @@ const UploadCSV = ({ onResponse }) => {
   };
 
   return (
-    <div>
+    <div className="upload-form">
       <h2>Upload CSV File</h2>
       <form onSubmit={handleSubmit}>
         <input type="file" onChange={handleFileChange} />
